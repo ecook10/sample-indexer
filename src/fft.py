@@ -6,13 +6,17 @@ import matplotlib.pyplot as plt
 
 FILE = 'data\hit.wav'
 
+FREQ_MIN = 20
+FREQ_MAX = 20000
+FREQ_COUNT = 100
+FREQS_X = np.rint(np.power(10, np.linspace(np.log10(FREQ_MIN), np.log10(FREQ_MAX), FREQ_COUNT))).astype(int)
+
 sample_rate, sample_data = wavfile.read(FILE)
 fft = np.abs(scp.fft(sample_data))
 
 print(f'sample shape: {sample_data.shape}')
 print(f'fft shape: {fft.shape}')
 
-time_wav = np.arange(0, len(sample_data)) / sample_rate
 fig, ax = plt.subplots()
-ax.plot(fft[:, 0])
+ax.plot(FREQS_X, fft[FREQS_X, 0])
 plt.show()
