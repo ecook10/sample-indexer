@@ -21,6 +21,7 @@ class SampleStats:
         t = np.arange(fullChunks)
         linFit = np.polyfit(t, chunkRmsMono, 1, full=True)
         expFit = np.polyfit(t, chunkRmsMono, 2, full=True)
+        print(linFit[1][0])
 
         fftValues = np.abs(fft(sampleData))
         fftFreqs = fftfreq(sampleData.shape[0], 1 / sampleRate)
@@ -38,10 +39,10 @@ class SampleStats:
         self.noiseIndex = noiseIndex
 
     def linError(self):
-        self.linFit[1][0]
+        return self.linFit[1][0]
 
     def expError(self):
-        self.expFit[1][0]
+        return self.expFit[1][0]
 
     def __str__(self):
         return f"""
@@ -52,5 +53,5 @@ class SampleStats:
         noise level: {self.noiseIndex}
         """
 
-stats = SampleStats('data\piano-chord.wav')
+stats = SampleStats('data\snap.wav')
 print(str(stats))

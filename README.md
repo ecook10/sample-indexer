@@ -29,6 +29,9 @@ _for PowerShell - see here for other options: https://docs.python.org/3/library/
 Could also maybe use some of the grouping I already did to try train some ML models to attempt to make more abstract groupings, like "digital" vs. "natural"
 
 # TODO
-[] fourier transform sample data + graph
-[] find fundamental pitch
-[] algorithm for noise at time t
+* plot results (so we can debug them)
+* batch perform
+* persist batch indices
+* search functionality
+* write sorted lists of copied files
+* integrate w/ ableton somehow (max plugin? write drumrack folders / files?)
