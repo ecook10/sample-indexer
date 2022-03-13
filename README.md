@@ -32,6 +32,7 @@ Could also maybe use some of the grouping I already did to try train some ML mod
 * plot results (so we can debug them)
 * batch perform
 * persist batch indices
-* search functionality
-* write sorted lists of copied files
+* search functionality (criteria percentages)
+* write sorted sub-directiries w/ copied files
+* command-line util
 * integrate w/ ableton somehow (max plugin? write drumrack folders / files?)
