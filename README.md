@@ -29,9 +29,13 @@ _for PowerShell - see here for other options: https://docs.python.org/3/library/
 Could also maybe use some of the grouping I already did to try train some ML models to attempt to make more abstract groupings, like "digital" vs. "natural"
 
 # TODO
-* plot results (so we can debug them)
-* batch perform
-* persist batch indices
+* linear fit to _decay_ exclusively (i.e. start at maximum amplitude) - ditch the 2nd degree polynomial fit
+* fit to exponential decay (try both methods here: https://stackoverflow.com/questions/3938042/fitting-exponential-decay-with-no-initial-guessing)
+* plot linear + exponential decay
+* experiment with RMS parameters (chunk size + stride)
+* batch perform on an entire directory
+* get some better samples (collect a subset from my actual sample library)
+* persist batch indices somehow (db? maybe try no-sql?)
 * search functionality (criteria percentages)
 * write sorted sub-directiries w/ copied files
 * command-line util
